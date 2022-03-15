@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-
+import org.*;
 public class GetUserDetails{
     String username, phone, ch;
     GetUserDetails(String choice){
@@ -11,23 +11,27 @@ public class GetUserDetails{
         System.out.println("Enter Phone: ");
         phone = sc.nextLine();
 
-        this.ch = choice;
+        ch = choice;
+        JSONObject obj = new JSONObject();
 
         if(username == "" || phone == ""){
             System.out.println("Invaild username or phone");
         }
         else{
-            if(choice == "single"){
+            if(ch == "single"){
                 RoomFactory roomFactory = new RoomFactory();
                 Room room = roomFactory.booked("single");
+                room.roomBook();
             }
             else if(choice == "double"){
                 RoomFactory roomFactory = new RoomFactory();
                 Room room = roomFactory.booked("double");
+                room.roomBook();
             }
             else if(choice == "luxuary"){
                 RoomFactory roomFactory = new RoomFactory();
                 Room room = roomFactory.booked("luxuary");
+                room.roomBook();
             }
         }
     }

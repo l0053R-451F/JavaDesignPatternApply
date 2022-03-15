@@ -18,9 +18,10 @@ public class Hotel{
         RoomDetails roomdetails = new RoomDisplay();
         roomdetails.accept(new RoomDisplayVisitor());
         RoomFactory roomFactory = new RoomFactory();
+        System.out.print("Enter your Choice which room you want: ");
         Scanner sc= new Scanner(System.in);
         int choice = sc.nextInt();
-        System.out.print("Enter your Choice which room you want: ");
+        
         if(choice == 1){
             GetUserDetails gud = new GetUserDetails("single");
         }
