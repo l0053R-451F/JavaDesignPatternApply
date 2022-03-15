@@ -10,7 +10,7 @@ public class RoomFactory {
             
             case "double":
                 return new DoubleRoom();
-            case "laxary":
+            case "laxuary":
                 return new LuxaryRoom();
             default:
                 throw new IllegalArgumentException("Unknown channel "+channel); 

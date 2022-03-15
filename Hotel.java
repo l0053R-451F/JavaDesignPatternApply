@@ -24,6 +24,12 @@ public class Hotel{
         if(choice == 1){
             GetUserDetails gud = new GetUserDetails("single");
         }
+        else if(choice == 2){
+            GetUserDetails gud = new GetUserDetails("double");
+        }
+        else if(choice == 3){
+            GetUserDetails gud = new GetUserDetails("luxuary");
+        }
         // else if(choice == 2){
         //     GetUserDetails gud = new GetUserDetails();
         //     if(gud.getUsername() == "" || gud.getPhone() == ""){
